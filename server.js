@@ -1,12 +1,18 @@
 /////////////////////////// import modules ///////////////////////////
 const express = require('express');
+var cors = require('cors')
 const bodyParser = require('body-parser');
 const { ApiContracts, ApiControllers } = require('authorizenet');
+// const path = require("path");
+
 require('dotenv').config();
 
 /////////////////////////// use middleware ///////////////////////////
 
 const app = express();
+// app.use(express.static(path.join(__dirname, "scr"))); // put this line of code in app.js
+
+app.use(cors());
 
 
 app.use(bodyParser.json());
@@ -64,8 +70,12 @@ const server = require('http').Server(app); // import http module
 const PORT = process.env.PORT || 8080;
 
 /////////////////////// test server running ///////////////////////
+app.get('/api/test', (req, res) => {
+    res.json({data: 'Hello, World! 🚀  Server running  🚀'});
+});
+
 app.get('/', (req, res) => {
-    res.send('Hello, World! 🚀  Server running  🚀');
+    res.send('Hello, World! 🚀  Server running  🚀' );
 });
 
 
