@@ -1,0 +1,78 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f5f5f5; */
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  /* background: #fff; */
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 0 3px 2px #cec7c759;
+  text-align: center;
+}
+
+.form-wrapper h1 {
+  margin-bottom: 1em;
+}
+
+.form-wrapper form div {
+  margin-bottom: 1em;
+}
+
+.form-wrapper label {
+  display: block;
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+.form-wrapper input {
+  width: 95%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-wrapper button {
+  padding: 0.5em;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 2em;
+
+}
+
+.form-wrapper button:hover {
+  background: #333;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.form-wrapper p {
+  margin-top: 1em;
+  color: #333;
+}
+
+.alert {
+  padding: 1em;
+  border-radius: 4px;
+  background: #f8d7da;
+  color: #721c24;
+  margin-bottom: 1em;
+}
