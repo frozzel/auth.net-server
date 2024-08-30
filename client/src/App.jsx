@@ -19,7 +19,8 @@ function App() {
             const response = await client.get('/test');
             setMessage(response.data.data);
         } catch (error) {
-            console.log('Error: Could not fetch the data.');
+            console.log('Error: Could not fetch the data.', error);
+            setMessage('Error: Could not fetch the data.');
         }
     }
     testRoute();
@@ -37,7 +38,7 @@ function App() {
                 setMessage(`Transaction failed: ${response.data.message}`);
             }
         } catch (error) {
-            setMessage('Error: Could not process the transaction.');
+            setMessage('Error: Could not process the transaction.', error);
         }
     };
 
