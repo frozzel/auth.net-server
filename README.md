@@ -1,11 +1,14 @@
 <div>
-<a href=""><img src="https://github.com/frozzel/auth.net-server/blob/62a70d05a39cf90e85c6ab6950e7755bc90b1ef0/client/src/assets/Screenshot1.png" align="center" height="" width="50%" ></a></div>
-<div>
-<a href=""><img src="https://github.com/frozzel/auth.net-server/blob/62a70d05a39cf90e85c6ab6950e7755bc90b1ef0/client/src/assets/Screenshot2.png" align="center" height="" width="50%" ></a></div>
+<a href=""><img src="" align="center" height="" width="50%" ></a></div>
 
 # MERN Stack Authorize.Net Application
 
 Welcome to the MERN Stack Authorize.Net Application! This application serves as an example of how to integrate the Authorize.Net payment gateway into a MERN (MongoDB, Express.js, React, Node.js) stack. 
+
+## Screen Shots
+
+![Screen Shots](https://github.com/frozzel/auth.net-server/blob/62a70d05a39cf90e85c6ab6950e7755bc90b1ef0/client/src/assets/Screenshot1.png)
+![Screen Shots2](https://github.com/frozzel/auth.net-server/blob/62a70d05a39cf90e85c6ab6950e7755bc90b1ef0/client/src/assets/Screenshot2.png)
 
 ## Table of Contents
 
