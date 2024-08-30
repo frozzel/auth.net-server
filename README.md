@@ -1,5 +1,7 @@
 <div>
-<a href=""><img src="https://github.com/frozzel/frozzel/blob/63a9fc8f1afe7447e8074be5e67a79bfa6c3c591/Black%20Playful%20Animated%20Welcome%20Channel%20Youtube%20Intro%20Video.gif" align="center" height="" width="100%" ></a></div>
+<a href=""><img src="https://github.com/frozzel/auth.net-server/blob/62a70d05a39cf90e85c6ab6950e7755bc90b1ef0/client/src/assets/Screenshot1.png" align="center" height="" width="50%" ></a></div>
+<div>
+<a href=""><img src="https://github.com/frozzel/auth.net-server/blob/62a70d05a39cf90e85c6ab6950e7755bc90b1ef0/client/src/assets/Screenshot2.png" align="center" height="" width="50%" ></a></div>
 
 # MERN Stack Authorize.Net Application
 
