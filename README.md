@@ -1,5 +1,5 @@
 <div>
-<a href=""><img src="" align="center" height="" width="50%" ></a></div>
+<a href=""><img src="https://github.com/frozzel/auth.net-server/blob/e9eebc44b27af51f9d2dcef5e9c96b5d63479682/client/src/assets/authorize-net-logo.jpg" align="center" height="" width="100%" ></a></div>
 
 # MERN Stack Authorize.Net Application
 
