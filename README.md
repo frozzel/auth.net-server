@@ -74,8 +74,7 @@ To configure the application, you will need to set up environment variables for 
 Create a `.env` file in the `backend` directory and add the following variables:
 
 ```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
+PORT=8080
 AUTHORIZE_NET_API_LOGIN_ID=your_authorize_net_api_login_id
 AUTHORIZE_NET_TRANSACTION_KEY=your_authorize_net_transaction_key
 JWT_SECRET=your_jwt_secret
