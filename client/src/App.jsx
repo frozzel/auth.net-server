@@ -12,18 +12,8 @@ function App() {
     const [cardNumber, setCardNumber] = useState('');
     const [expirationDate, setExpirationDate] = useState('');
     const [amount, setAmount] = useState('');
-    const [message, setMessage] = useState(null);
+    const [message, setMessage] = useState("🚀  Server running  🚀");
 
-    const testRoute = async () => {
-        try {
-            const response = await client.get('/test');
-            setMessage(response.data.data);
-        } catch (error) {
-            console.log('Error: Could not fetch the data.', error);
-            setMessage('Error: Could not fetch the data.');
-        }
-    }
-    testRoute();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -33,8 +23,10 @@ function App() {
             const response = await client.post('/charge', { cardNumber, expirationDate, amount });
 
             if (response.data.success) {
-                setMessage(`Transaction successful! Transaction ID: ${response.data.transactionId}`);
+                console.log('response success', response);
+                setMessage(`Transaction successful! Transaction ID: ${response.request.responseText}`);
             } else {
+                console.log('response', response);
                 setMessage(`Transaction failed: ${response.data.message}`);
             }
         } catch (error) {
