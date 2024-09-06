@@ -91,8 +91,11 @@ JWT_SECRET=your_jwt_secret
 
 Create a `.env` file in the `frontend` directory and add the following variable:
 
+> [!TIP]
+> This is not required but is useful in a production setting if using CRA not Vite
+
 ```env
-REACT_APP_API_URL=http://localhost:5000
+REACT_APP_API_URL=http://localhost:5173
 ```
 
 ## Usage
