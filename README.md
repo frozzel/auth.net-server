@@ -77,6 +77,9 @@ To configure the application, you will need to set up environment variables for 
 
 Create a `.env` file in the `backend` directory and add the following variables:
 
+> [!IMPORTANT]
+> You must get your keys from your account settings at authorize.net 
+
 ```env
 PORT=8080
 AUTHORIZE_NET_API_LOGIN_ID=your_authorize_net_api_login_id
@@ -103,7 +106,7 @@ REACT_APP_API_URL=http://localhost:5000
 2. Start the server:
 
    ```sh
-   npm start or npm run dev 
+   npm start
    ```
 
 ### Running the Frontend
@@ -114,7 +117,7 @@ REACT_APP_API_URL=http://localhost:5000
    cd ../client
    ```
 
-2. Start the development server:
+2. Start the development server && client concurrently:
 
    ```sh
    npm run dev
