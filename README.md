@@ -69,6 +69,10 @@ Before you begin, ensure you have the following installed:
 
 To configure the application, you will need to set up environment variables for both the backend and the frontend.
 
+> [!NOTE]
+>  [Authorize.net Api Docs](https://developer.authorize.net/api/reference/features/payment-transactions.html)
+
+
 ### Backend
 
 Create a `.env` file in the `backend` directory and add the following variables:
