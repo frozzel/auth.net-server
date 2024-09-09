@@ -95,7 +95,8 @@ Create a `.env` file in the `frontend` directory and add the following variable:
 > This is not required but is useful in a production setting if using CRA not Vite
 
 ```env
-REACT_APP_API_URL=http://localhost:5173
+VITE_REACT_APP_API_URL=http://localhost:5173
+VITE_AUTHORIZE_NET_PUBLIC_CLIENT_KEY=your_key
 ```
 
 ## Usage
