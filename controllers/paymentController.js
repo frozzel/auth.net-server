@@ -57,13 +57,15 @@ exports.processPayment = async (req, res) => {
     }
 
 exports.getAnAcceptPaymentPage = (req, res) => {
+    
+    var userId = req.body.userId;
     var merchantAuthenticationType = new ApiContracts.MerchantAuthenticationType();
 	merchantAuthenticationType.setName(process.env.AUTHORIZE_NET_API_LOGIN_ID);
 	merchantAuthenticationType.setTransactionKey(process.env.AUTHORIZE_NET_TRANSACTION_KEY);
 
-        // Create a CustomerDataType object to hold the customer ID
-        var customerData = new ApiContracts.CustomerDataType();
-        customerData.setId('99155sfdsfg877');  // Replace CUSTOMER_ID with your actual customer ID
+    // Create a CustomerDataType object to hold the customer ID
+    var customerData = new ApiContracts.CustomerDataType();
+    customerData.setId(userId)  // Replace CUSTOMER_ID with your actual customer ID
 
 	var transactionRequestType = new ApiContracts.TransactionRequestType();
 	transactionRequestType.setTransactionType(ApiContracts.TransactionTypeEnum.AUTHCAPTURETRANSACTION);
@@ -76,11 +78,17 @@ exports.getAnAcceptPaymentPage = (req, res) => {
 
 	var setting2 = new ApiContracts.SettingType();
 	setting2.setSettingName('hostedPaymentOrderOptions');
-	setting2.setSettingValue('{\"show\": false}');
+	setting2.setSettingValue('{\"show\": true}');
+
+        // Adding the return URL setting
+    var returnUrlSetting = new ApiContracts.SettingType();
+    returnUrlSetting.setSettingName('hostedPaymentReturnOptions');
+    returnUrlSetting.setSettingValue(`{"url": "${process.env.PAYMENT_REDIRECT}", "urlText": "Home", "cancelUrl": "${process.env.PAYMENT_CANCEL}", "cancelUrlText": "Cancel"}`);
 
 	var settingList = [];
 	settingList.push(setting1);
 	settingList.push(setting2);
+    settingList.push(returnUrlSetting); // Add the return URL setting to the list
    
 
 	var alist = new ApiContracts.ArrayOfSetting();
@@ -109,7 +117,7 @@ exports.getAnAcceptPaymentPage = (req, res) => {
 		{
 			if(response.getMessages().getResultCode() == ApiContracts.MessageTypeEnum.OK)
 			{
-				console.log('Hosted payment page token :');
+				console.log('🔑 Hosted payment page token Retrieved 🔑');
 				// console.log(response.getToken());
                 res.json(response.getToken());
 			}
