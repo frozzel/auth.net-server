@@ -85,6 +85,8 @@ PORT=8080
 AUTHORIZE_NET_API_LOGIN_ID=your_authorize_net_api_login_id
 AUTHORIZE_NET_TRANSACTION_KEY=your_authorize_net_transaction_key
 JWT_SECRET=your_jwt_secret
+PAYMENT_REDIRECT=your_redirect_url
+PAYMENT_CANCEL=your_cancel_url
 ```
 
 ### Frontend
