@@ -83,7 +83,7 @@ exports.getAnAcceptPaymentPage = (req, res) => {
         // Adding the return URL setting
     var returnUrlSetting = new ApiContracts.SettingType();
     returnUrlSetting.setSettingName('hostedPaymentReturnOptions');
-    returnUrlSetting.setSettingValue(`{"url": "${process.env.PAYMENT_REDIRECT}", "urlText": "Home", "cancelUrl": "${process.env.PAYMENT_CANCEL}", "cancelUrlText": "Cancel"}`);
+    returnUrlSetting.setSettingValue(`{"url": "${process.env.PAYMENT_REDIRECT}", "urlText": "Home", "cancelUrl": "${process.env.PAYMENT_CANCEL}", "cancelUrlText": "Cancel"} `);
 
 	var settingList = [];
 	settingList.push(setting1);
