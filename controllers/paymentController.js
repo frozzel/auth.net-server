@@ -1,6 +1,6 @@
-// const { ApiContracts, ApiControllers } = require('authorizenet');
 var ApiContracts = require('authorizenet').APIContracts;
 var ApiControllers = require('authorizenet').APIControllers;
+const {getTransactionDetails} = require('./utils');
 
 
 exports.processPayment = async (req, res) => {
@@ -139,8 +139,19 @@ exports.getAnAcceptPaymentPage = (req, res) => {
 	});
 }
 
-if (require.main === module) {
-	getAnAcceptPaymentPage(function(){
-		console.log('getAnAcceptPaymentPage call complete.');
-	});
+exports.webhook = async (req, res) => {
+    console.log(req.body.payload.id);
+    const transactionId = req.body.payload.id;
+    let customerId = 0;
+
+
+    getTransactionDetails(transactionId, (response) => {
+        console.log('response', response);
+        if(response.getTransaction() !== null){
+            customerId = response.getTransaction().getCustomer().getId();
+        }
+        console.log('customerId', customerId);
+        res.json(response);
+    });
+    
 }

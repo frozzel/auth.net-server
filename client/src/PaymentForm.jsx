@@ -23,29 +23,29 @@ function PaymentForm() {
     , []);
 
       return formToken ? (
-            //   <AcceptHosted
-            //     formToken={formToken}
-            //     integration="iframe"
-            //     settingName="hostedPaymentCustomerOptions"
-            //     onTransactionResponse={(response) =>
-            //       setResponse(JSON.stringify(response, null, 2) + '\n')
-            //     }
-            //   >
-            //     <AcceptHosted.Button className="btn btn-primary">
-            //       Form
-            //     </AcceptHosted.Button>
-            //     <AcceptHosted.IFrameBackdrop />
-            //     <AcceptHosted.IFrameContainer>
-            //       <AcceptHosted.IFrame />
-            //     </AcceptHosted.IFrameContainer>
-            //   </AcceptHosted>
-            <>
-            	<form method="post" action="https://test.authorize.net/payment/payment" id="formAuthorizeNetTestPage" name="formAuthorizeNetTestPage">
-		<input type="hidden" name="token" value={formToken} />
-		Continue to Authorize.net to Payment Page
-		<button id="btnContinue">Continue to next page</button>
-	</form>         
-            </>
+              <AcceptHosted
+                formToken={formToken}
+                integration="iframe"
+                settingName="hostedPaymentCustomerOptions"
+                onTransactionResponse={(response) =>
+                  setResponse(JSON.stringify(response, null, 2) + '\n')
+                }
+              >
+                <AcceptHosted.Button className="btn btn-primary">
+                  Form
+                </AcceptHosted.Button>
+                <AcceptHosted.IFrameBackdrop />
+                <AcceptHosted.IFrameContainer>
+                  <AcceptHosted.IFrame />
+                </AcceptHosted.IFrameContainer>
+              </AcceptHosted>
+    //         <>
+    //         	<form method="post" action="https://test.authorize.net/payment/payment" id="formAuthorizeNetTestPage" name="formAuthorizeNetTestPage">
+	// 	<input type="hidden" name="token" value={formToken} />
+	// 	Continue to Authorize.net to Payment Page
+	// 	<button id="btnContinue">Continue to next page</button>
+	// </form>         
+    //         </>
             ) : (
               <div>
                 ...Loading
