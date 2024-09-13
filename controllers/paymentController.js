@@ -98,7 +98,7 @@ exports.getAnAcceptPaymentPage = (req, res) => {
 	getRequest.setMerchantAuthentication(merchantAuthenticationType);
 	getRequest.setTransactionRequest(transactionRequestType);
 	getRequest.setHostedPaymentSettings(alist);
-    // getRequest.setRefId('123456');
+    getRequest.setRefId('1234569914');
 
 	// console.log(JSON.stringify(getRequest.getJSON(), null, 2));
 		
