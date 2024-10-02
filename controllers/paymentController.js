@@ -148,9 +148,9 @@ exports.webhook = async (req, res) => {
     getTransactionDetails(transactionId, (response) => {
         console.log('response', response);
         if(response.getTransaction() !== null){
-            customerId = response.getTransaction().getCustomer().getId();
+            customerId = response.getTransaction().getCustomer().getEmail();
         }
-        console.log('customerId', customerId);
+        console.log('custumer Email', customerId);
         res.json(response);
     });
     

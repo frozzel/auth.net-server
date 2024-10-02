@@ -9,7 +9,7 @@ const client = axios.create({
 const testChild = "123456789"
 
 function PaymentForm() {
-    // const [response, setResponse] = useState('');
+    const [response, setResponse] = useState('');
     const [formToken, setFormToken] = useState('');
 
     const getToken = async (userId) => {
@@ -21,7 +21,6 @@ function PaymentForm() {
         getToken(testChild).then((token) => setFormToken(token));
       }
     , []);
-
       return formToken ? (
               <AcceptHosted
                 formToken={formToken}
